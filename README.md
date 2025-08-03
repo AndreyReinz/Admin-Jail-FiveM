@@ -1,50 +1,24 @@
-📌 Features
-✔ Custom Jail Location – Send players to a high-security prison (configurable coordinates).
-✔ Anti-Escape System – Prevents fleeing with teleport-back and vehicle blocking.
-✔ Time-Based Sentences – Lock players for minutes/hours with automatic release.
-✔ Persistence – Saves jail data, so players remain imprisoned after reconnecting.
-✔ Admin Commands – Easy-to-use /ajail and /unjail commands.
-✔ Full Action Restriction – Blocks weapons, attacks, and vehicle usage.
-✔ Custom Notifications – Clear in-game messages for admins & prisoners.
+# AJail - Advanced Prison System for FiveM
 
-🚀 Installation
-Download the latest release and extract it into your resources folder.
+![GitHub](https://img.shields.io/github/license/yourusername/ajail?color=blue)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yourusername/ajail)
 
-Add this to your server.cfg:
+A sophisticated jail system for FiveM servers featuring custom locations, anti-escape mechanisms, and persistent sentences.
 
-lua
-ensure ajail
-Configure admins in server.lua (Steam/Discord IDs).
+## ✨ Features
 
-Restart your server – done!
+- 🏢 **Custom Jail Location** - Configurable prison coordinates
+- 🚫 **Anti-Escape System** - Teleport-back and vehicle blocking
+- ⏳ **Time-Based Sentences** - Automatic release after sentence completion
+- 💾 **Persistence** - Saves jail data across server restarts
+- 👮 **Admin Commands** - Easy-to-use `/ajail` and `/unjail` commands
+- 🔒 **Full Action Restriction** - Blocks weapons, attacks, and vehicles
+- 📢 **Custom Notifications** - Clear in-game messages for all parties
 
-🔧 Configuration
-📍 Locations
-Edit in client.lua:
+## 🚀 Installation
 
-lua
-local jailLocation = vector3(4391.08, -4623.84, 134.42)  -- Prison coordinates  
-local releaseLocation = vector3(-1792.08, 4069.86, 145.70) -- Release point  
-👑 Admins Setup
-Add your IDs in server.lua:
-
-lua
-local admins = {
-    steam = {"110000139dc0b25"},    -- Steam Hex IDs
-    discord = {"515202972867624961"} -- Discord IDs
-}
-📜 Commands
-Command	Usage	Description
-/ajail	/ajail <ID> <Minutes> <Reason>	Jails a player with a specified reason.
-/unjail	/unjail <ID>	Releases a player early (admin-only).
-🔐 Security
-No Escape – Players get teleported back if they leave the jail zone.
-
-Vehicle Protection – Any entered vehicle gets deleted.
-
-Weapon Lock – All weapons are removed upon imprisonment.
-
-UI Restrictions – Blocks F1 & ESC menu in jail.
-
-📂 Data Persistence
-Jailed players are saved in jailed_players.json, ensuring they stay imprisoned even after server restarts.
+1. Download the latest release
+2. Extract into your `resources` folder
+3. Add to `server.cfg`:
+   ```lua
+   ensure ajail
